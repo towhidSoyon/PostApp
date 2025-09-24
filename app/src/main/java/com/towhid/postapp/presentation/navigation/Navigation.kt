@@ -15,6 +15,7 @@ import com.towhid.postapp.presentation.favourite.FavouritesViewModel
 import com.towhid.postapp.presentation.post.PostsScreen
 import com.towhid.postapp.presentation.post.PostsViewModel
 import com.towhid.postapp.utils.Prefs
+import io.github.aakira.napier.Napier
 
 
 object Routes {
