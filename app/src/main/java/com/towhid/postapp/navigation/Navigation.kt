@@ -37,7 +37,9 @@ fun AppNavHost() {
         composable(Routes.SPLASH){
             SplashScreen(
                 navigate = {
-                    navController.navigate(nextDestination)
+                    navController.navigate(nextDestination){
+                        popUpTo(0) { inclusive = true }
+                    }
                 }
             )
         }
