@@ -1,4 +1,4 @@
-package com.towhid.postapp.presentation.navigation
+package com.towhid.postapp.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -14,11 +14,12 @@ import com.towhid.postapp.presentation.favourite.FavouritesScreen
 import com.towhid.postapp.presentation.favourite.FavouritesViewModel
 import com.towhid.postapp.presentation.post.PostsScreen
 import com.towhid.postapp.presentation.post.PostsViewModel
+import com.towhid.postapp.presentation.splash.SplashScreen
 import com.towhid.postapp.utils.Prefs
-import io.github.aakira.napier.Napier
 
 
 object Routes {
+    const val SPLASH = "splash"
     const val LOGIN = "login"
     const val REGISTRATION = "register"
     const val FAVOURITES = "favs"
@@ -30,9 +31,16 @@ fun AppNavHost() {
     val prefs = remember { Prefs(context) }
     val navController = rememberNavController()
 
-    val startDestination = if (prefs.isLoggedIn()) Routes.POSTS else Routes.LOGIN
+    val nextDestination = if (prefs.isLoggedIn()) Routes.POSTS else Routes.LOGIN
 
-    NavHost(navController = navController, startDestination = startDestination) {
+    NavHost(navController = navController, startDestination = Routes.SPLASH) {
+        composable(Routes.SPLASH){
+            SplashScreen(
+                navigate = {
+                    navController.navigate(nextDestination)
+                }
+            )
+        }
         composable(Routes.LOGIN) {
             val viewModel: AuthViewModel = hiltViewModel()
             LoginScreen(
