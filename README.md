@@ -57,6 +57,3 @@ Libraries
 - Error handling is basic (simple error messages via state).
 - App icon is a placeholder.
 
-
-yaml
-Copy code
