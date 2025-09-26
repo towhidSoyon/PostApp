@@ -25,6 +25,7 @@ A simple Android app built with **Jetpack Compose, Clean Architecture, and Hilt 
   - Run the app.
 
 **🏛️ Architecture & Libraries Used**
+
 Architecture
  - Clean Architecture + MVVM
     - Presentation Layer: Jetpack Compose UI + ViewModels.
