@@ -61,10 +61,10 @@ Libraries
 ## Screenshots
 
 <p align="center">
-  <img src="assets/splash_screen.jpg" alt="Image 1" width="250"/>
-  <img src="assets/login_screen.jpg" alt="Image 2" width="250"/>
-  <img src="assets/registration_screen.jpg" alt="Image 3" width="250"/>
-  <img src="assets/post_screen.jpg" alt="Image 4" width="250"/>
-   <img src="assets/fav_screen.jpg" alt="Image 4" width="250"/>
-   <img src="assets/search_screen.jpg" alt="Image 4" width="250"/>
+  <img src="assets/splash_screen.jpg" alt="Image 1" width="250" style="border: 2px solid #fff;"/>
+  <img src="assets/login_screen.jpg" alt="Image 2" width="250" style="border: 2px solid #fff;"/>
+  <img src="assets/registration_screen.jpg" alt="Image 3" width="250" style="border: 2px solid #fff;"/>
+  <img src="assets/post_screen.jpg" alt="Image 4" width="250" style="border: 2px solid #fff;"/>
+   <img src="assets/fav_screen.jpg" alt="Image 4" width="250" style="border: 2px solid #fff;"/>
+   <img src="assets/search_screen.jpg" alt="Image 4" width="250" style="border: 2px solid #fff;"/>
 </p>
