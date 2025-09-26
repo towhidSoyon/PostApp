@@ -6,7 +6,6 @@ import com.towhid.postapp.data.mapper.PostMapper
 import com.towhid.postapp.data.remote.ApiService
 import com.towhid.postapp.domain.model.Post
 import com.towhid.postapp.domain.repository.PostsRepository
-import io.github.aakira.napier.Napier
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -19,7 +18,8 @@ class PostsRepositoryImpl @Inject constructor(
 ) : PostsRepository {
 
 
-    override fun observePosts(): Flow<List<Post>> = postDao.observeAll().map { list -> list.map { PostMapper.entityToDomain(it) } }
+    override fun observePosts(): Flow<List<Post>> =
+        postDao.observeAll().map { list -> list.map { PostMapper.entityToDomain(it) } }
 
 
     override suspend fun fetchPosts(page: Int, limit: Int) {
@@ -40,12 +40,14 @@ class PostsRepositoryImpl @Inject constructor(
     }
 
 
-    override fun searchPosts(q: String): Flow<List<Post>> = postDao.search(q).map { list -> list.map { PostMapper.entityToDomain(it) } }
+    override fun searchPosts(q: String): Flow<List<Post>> =
+        postDao.search(q).map { list -> list.map { PostMapper.entityToDomain(it) } }
 
 
     override suspend fun setFavourite(postId: Int, fav: Boolean) = postDao.setFavourite(postId, fav)
 
 
-    override fun observeFavourites(): Flow<List<Post>> = postDao.observeFavourites().map { list -> list.map { PostMapper.entityToDomain(it) } }
+    override fun observeFavourites(): Flow<List<Post>> =
+        postDao.observeFavourites().map { list -> list.map { PostMapper.entityToDomain(it) } }
 
 }

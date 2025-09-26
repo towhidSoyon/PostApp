@@ -17,19 +17,16 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-
     @Provides
     @Singleton
     fun provideMoshi(): Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory())
         .build()
-
 
     @Provides
     @Singleton
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
         .build()
-
 
     @Provides
     @Singleton
@@ -38,7 +35,6 @@ object NetworkModule {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .client(client)
         .build()
-
 
     @Provides
     @Singleton

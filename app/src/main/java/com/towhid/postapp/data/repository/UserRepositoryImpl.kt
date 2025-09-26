@@ -5,7 +5,6 @@ import com.towhid.postapp.data.local.model.UserEntity
 import com.towhid.postapp.domain.model.User
 import com.towhid.postapp.domain.repository.UserRepository
 import com.towhid.postapp.utils.LoginResult
-import javax.annotation.meta.When
 import javax.inject.Inject
 import javax.inject.Singleton
 

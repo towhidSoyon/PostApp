@@ -16,17 +16,14 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
 
-
     @Provides
     @Singleton
     fun provideDatabase(@ApplicationContext ctx: Context): AppDatabase = Room.databaseBuilder(
         ctx, AppDatabase::class.java, "authposts_db"
     ).fallbackToDestructiveMigration().build()
 
-
     @Provides
     fun providePostDao(db: AppDatabase): PostDao = db.postDao()
-
 
     @Provides
     fun provideUserDao(db: AppDatabase): UserDao = db.userDao()
