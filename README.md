@@ -25,6 +25,7 @@ A simple Android app built with **Jetpack Compose, Clean Architecture, and Hilt 
   - Run the app.
 
 **🏛️ Architecture & Libraries Used**
+
 Architecture
  - Clean Architecture + MVVM
     - Presentation Layer: Jetpack Compose UI + ViewModels.
@@ -57,3 +58,17 @@ Libraries
 - Error handling is basic (simple error messages via state).
 - App icon is a placeholder.
 
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/splash_screen.jpg" alt="Image 1" width="250" style="border: 2 solid #fff;"/>
+  <img src="assets/login_screen.jpg" alt="Image 2" width="250" style="border: 2 solid #fff;"/>
+  <img src="assets/registration_screen.jpg" alt="Image 3" width="250" style="border: 2 solid #fff;"/>
+  <img src="assets/post_screen.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+   <img src="assets/fav_screen.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+   <img src="assets/search_screen.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+   <img src="assets/login_light.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+   <img src="assets/post_light.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+   <img src="assets/fav_light.jpg" alt="Image 4" width="250" style="border: 2 solid #fff;"/>
+</p>
